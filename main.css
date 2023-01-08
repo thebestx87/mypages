@@ -1,0 +1,40 @@
+body {
+  font-family: 'Hi Melody', cursive;
+  width: 450px;
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bg-grid.png");
+}
+
+
+.title {
+  color: white;
+  background-color: tomato;
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  text-align: center;
+
+}
+
+.msg {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.bucket {
+  width: 160px;
+  height: 160px;
+}
+
+.img1 {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img2 {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightred.png");
+  background-size: cover;
+  background-position: center;
+
+}
