@@ -1,5 +1,5 @@
 
-Kakao.init('1f7b21e900f44053af7fca36e1d72554');
+Kakao.init('1ea99b46c313d7dcdcfb12249f669f164');
 Kakao.Link.createDefaultButton({
   container: '#kakao-link-btn',
   objectType: 'feed',
