@@ -1,165 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> 부고장 </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>故 홍길동님 부고</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  <style>
-    body {
-      font-family: '맑은 고딕', sans-serif;
-      background-color: #f8f8f8;
-      margin: 0;
-      padding: 20px;
-      color: #333;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .photo {
-      text-align: center;
-    }
-
-    .photo img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #ccc;
-      margin-bottom: 16px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 4px;
-    }
-
-    .subtitle {
-      text-align: center;
-      color: #777;
-      margin-bottom: 20px;
-    }
-
-    .info p {
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .info strong {
-      display: inline-block;
-      width: 85px;
-    }
-
-    .account {
-      background: #f1f1f1;
-      padding: 12px;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
-    .qrcode, .share {
-      text-align: center;
-      margin-top: 25px;
-    }
-
-    .qrcode img {
-      width: 120px;
-      height: 120px;
-      border-radius: 8px;
-    }
-
-    #kakao-link-btn {
-      margin-top: 12px;
-      background-color: #FEE500;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #3c1e1e;
-      cursor: pointer;
-    }
-
-    .footer {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
     <div class="photo">
-      <img src="/man1.jpg" alt="고인 사진">
+      <img src="https://via.placeholder.com/150" alt="고인 사진">
     </div>
+    <h2>故 홍길동 님</h2>
+    <div class="subtitle">(향년 85세)</div>
 
-    <h2>故 김덕수 님</h2>
-    <div class="subtitle">(향년 75세)</div>
-
+    <div class="section-title">장례 정보</div>
     <div class="info">
-      <p><strong>별세일자:</strong> 2025년 7월 15일</p>
+      <p><strong>별세일자:</strong> 2025년 6월 22일</p>
+      <p><strong>발인:</strong> 2025년 6월 24일 오전 9시</p>
       <p><strong>빈소:</strong> 서울중앙병원 장례식장 2호실</p>
-      <p><strong>발인:</strong> 2025년 7월 18일 오전 9시</p>
-      <p><strong>연락처:</strong> 010-5556-5158 (김선애)</p>
+      <p><strong>상주:</strong> 김영식 (010-1234-5678)</p>
     </div>
 
+    <div class="section-title">유가족</div>
+    <div class="info">
+      <p><strong>자녀:</strong> 김태민, 김유정, 김성훈</p>
+      <p><strong>손주:</strong> 김도현, 김하윤, 박서준</p>
+    </div>
+
+    <div class="section-title">조의금 계좌</div>
     <div class="account">
-      <p><strong>조의금 계좌 안내</strong><br>
-        신한은행 110-185-556682<br>
-        예금주: 김선애
-      </p>
+      <p>신한은행 110-123-456789</p>
+      <p>예금주: 김영식</p>
+    </div>
+
+    <div class="section-title">장례식장 위치</div>
+    <div class="map-button">
+      <button onclick="window.open('https://naver.me/FakeFuneralMapLink', '_blank')">지도 보기</button>
     </div>
 
     <div class="qrcode">
-      <p><strong>장례식장 위치 안내</strong></p>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://naver.me/xyz123" alt="QR 코드">
-      <p style="font-size: 14px; color: #666;">위치 안내용 QR 코드</p>
+      <p>위치 안내용 QR 코드</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://naver.me/FakeFuneralMapLink" alt="장례식장 위치 QR">
     </div>
 
+    <div class="section-title">공유하기</div>
     <div class="share">
-      <p><strong>카카오톡으로 공유하기</strong></p>
-      <button id="kakao-link-btn">카카오톡 공유</button>
+      <button id="kakao-link-btn">카카오톡으로 공유하기</button>
+    </div>
+
+    <div class="section-title">온라인 조문 메시지</div>
+    <div class="message-form">
+      <form id="condolence-form">
+        <input type="text" id="visitor-name" placeholder="이름" required>
+        <textarea id="visitor-message" placeholder="조문 메시지를 입력해주세요." required></textarea>
+        <button type="submit">남기기</button>
+      </form>
+      <div id="message-list"><div class="message"><strong>김민수</strong>: 고인의 명복을 빕니다.</div>
+  <div class="message"><strong>박지은</strong>: 깊은 애도를 표합니다.</div>
+  <div class="message"><strong>이정훈</strong>: 삼가 고인의 평안을 기원합니다.</div></div>
     </div>
 
     <div class="footer">
       깊은 애도를 표해주신 모든 분들께 진심으로 감사드립니다.
     </div>
   </div>
-
-  <script>
-    // 카카오 SDK 초기화 (여기에 본인의 JavaScript 키를 넣어야 함)
-    Kakao.init('YOUR_KAKAO_JAVASCRIPT_KEY'); // 여기를 본인의 키로 바꿔줘
-
-    Kakao.Link.createDefaultButton({
-      container: '#kakao-link-btn',
-      objectType: 'feed',
-      content: {
-        title: '故 김덕수 님 부고 안내',
-        description: '빈소: 서울중앙병원 장례식장 2호실\n발인: 2025년 7월 18일 오전 9시',
-        imageUrl: 'https://cdn.pixabay.com/photo/2023/09/16/09/12/chrysanthemum-8256282_1280.jpg', // 고인 사진 또는 부고 대표 이미지
-        link: {
-          mobileWebUrl: 'thebestx87.github.io/mypages/', // 공유될 실제 링크
-          webUrl: 'thebestx87.github.io/mypages/'
-        }
-      },
-      buttons: [
-        {
-          title: '부고장 보기',
-          link: {
-            mobileWebUrl: 'thebestx87.github.io/mypages/',
-            webUrl: ''
-          }
-        }
-      ]
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
