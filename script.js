@@ -9,8 +9,8 @@ Kakao.Link.createDefaultButton({
     description: '서울중앙병원 장례식장 | 발인: 7월 24일 오전 9시',
     imageUrl: 'https://your-image-link.com/funeral-cover.jpg', // 썸네일 이미지
     link: {
-      mobileWebUrl: 'about:blank',  // 링크 없이 깔끔한 공유
-      webUrl: 'about:blank'
+      mobileWebUrl: 'https://thebestx87.github.io/mypages/  ',  // 링크 없이 깔끔한 공유
+      webUrl: 'https://thebestx87.github.io/mypages/'
     }
   },
   buttons: []  // 버튼 제거 → 미리보기 카드만 보여짐
