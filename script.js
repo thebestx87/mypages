@@ -5,8 +5,8 @@ Kakao.Link.createDefaultButton({
   container: '#kakao-link-btn',
   objectType: 'feed',
   content: {
-    title: '故 홍길동님 부고 안내',
-    description: '서울중앙병원 장례식장 | 발인: 6월 24일 오전 9시',
+    title: '故 김덕수님 부고 안내',
+    description: '서울중앙병원 장례식장 | 발인: 월 24일 오전 9시',
     imageUrl: 'https://your-image-link.com/funeral-cover.jpg', // 썸네일 이미지
     link: {
       mobileWebUrl: 'about:blank',  // 링크 없이 깔끔한 공유
